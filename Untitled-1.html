@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acceso Especial</title>
-  <style>
-    body {
-      background-color: #6a1b9a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-    .container, .card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-    input {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: none;
-      margin-bottom: 10px;
-      width: 150px;
-      text-align: center;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: none;
-      background-color: #ba68c8;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #ab47bc;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Para mi amor</title>
+ <style>
+ body {
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+ font-family: 'Arial', sans-serif;
+ color: #333;
+ }
+
+ .card {
+ background: rgba(255, 255, 255, 0.9);
+ padding: 40px;
+ border-radius: 25px;
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+ max-width: 500px;
+ text-align: center;
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ backdrop-filter: blur(10px);
+ }
+
+ h1 {
+ color: #ff4757;
+ font-size: 2.2rem;
+ margin-bottom: 20px;
+ font-family: 'Georgia', serif;
+ }
+
+ p {
+ font-size: 1.1rem;
+ line-height: 1.8;
+ color: #555;
+ margin-bottom: 30px;
+ }
+
+ .signature {
+ font-weight: bold;
+ font-size: 1.2rem;
+ color: #ff4757;
+ display: block;
+ margin-top: 20px;
+ }
+
+ .heart {
+ color: #ff4757;
+ font-size: 2rem;
+ animation: pulse 1.5s infinite;
+ display: inline-block;
+ }
+
+ @keyframes pulse {
+ 0% { transform: scale(1); }
+ 50% { transform: scale(1.2); }
+ 100% { transform: scale(1); }
+ }
+ </style>
 </head>
 <body>
-
-  <div id="login-container" class="container">
-    <h2>Ingresa la contraseña</h2>
-    <input type="password" id="password" placeholder="****">
-    <br>
-    <button onclick="checkPassword()">Entrar</button>
-  </div>
-
-  <div id="card" class="card hidden">
-    <h1>¡Hola!</h1>
-    <p>Este es un espacio especial para ti.</p>
-  </div>
-
-  <script>
-    function checkPassword() {
-      const password = document.getElementById('password').value;
-      if (password === '1234') {
-        document.getElementById('login-container').classList.add('hidden');
-        document.getElementById('card').classList.remove('hidden');
-      } else {
-        alert('Contraseña incorrecta');
-      }
-    }
-  </script>
+ <div class="card">
+ <h1>Feliz tercer mes, amor</h1>
+ <p>
+ Cada día que pasa a tu lado me confirmo lo increíble que eres y lo afortunado que soy de tenerte. 
+ Todo este tiempo ha sido maravilloso; gracias por tu compañía, por cada momento compartido y por ir descubriéndome más cada día, conociendo tus detalles y viendo cómo nuestra historia se vuelve cada vez más bonita. 
+ Gracias por llegar a mi vida y por regalarme tanta alegría. ¡Me has hecho el hombre más feliz del mundo! 
+ </p>
+ <span class="heart">♥</span>
+ <span class="signature">Te amo muchísimo</span>
+ </div>
 </body>
 </html>
