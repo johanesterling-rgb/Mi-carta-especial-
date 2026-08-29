@@ -3,17 +3,93 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Para ti</title>
- <link rel="stylesheet" href="style.css">
+ <title>Feliz tercer mes</title>
+ <style>
+ body {
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background: radial-gradient(circle, #ffe3e3 0%, #ffd1d1 100%);
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ color: #4a4a4a;
+ overflow: hidden;
+ }
+
+ .envelope {
+ background: #ffffff;
+ padding: 60px;
+ border-radius: 20px;
+ box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+ max-width: 600px;
+ text-align: center;
+ position: relative;
+ border: 2px solid #ffb6b6;
+ background-image: 
+ radial-gradient(circle at 10% 20%, rgba(255,182,182,0.3) 0%, transparent 20%),
+ radial-gradient(circle at 90% 80%, rgba(255,182,182,0.3) 0%, transparent 20%);
+ }
+
+ h1 {
+ color: #ff6b6b;
+ font-size: 2.5rem;
+ margin-bottom: 30px;
+ font-family: 'Playfair Display', Georgia, serif;
+ font-weight: 700;
+ }
+
+ p {
+ font-size: 1.2rem;
+ line-height: 1.8;
+ color: #666;
+ margin-bottom: 40px;
+ text-align: justify;
+ }
+
+ .signature {
+ font-weight: 600;
+ font-size: 1.4rem;
+ color: #ff6b6b;
+ display: block;
+ margin-top: 30px;
+ font-family: 'Playfair Display', Georgia, serif;
+ }
+
+ .heart-icon {
+ color: #ff4757;
+ font-size: 3rem;
+ animation: beat 1s infinite alternate;
+ display: inline-block;
+ }
+
+ @keyframes beat {
+ to { transform: scale(1.2); }
+ }
+
+ .decorations {
+ position: absolute;
+ top: 20px;
+ left: 20px;
+ right: 20px;
+ bottom: 20px;
+ border: 1px dashed rgba(255, 107, 107, 0.2);
+ pointer-events: none;
+ }
+ </style>
 </head>
 <body>
- <div class="card">
+ <div class="decorations"></div>
+ <div class="envelope">
  <h1>Feliz tercer mes, amor</h1>
- <p>Cada día que pasa a tu lado me confirma lo increíble que eres y lo afortunado que soy de tenerte. Todo este tiempo ha sido maravilloso; gracias por tu compañía, por cada momento compartido y por ir descubriéndote más cada día, conociendo tus detalles y viendo cómo nuestra historia se vuelve cada vez más bonita.
-
-Gracias por llegar a mi vida y por regalarme tanta alegría. Me has hecho el hombre más feliz del mundo
-
-Te amo Muchisimo</p>
+ <p>
+ Cada día que pasa a tu lado me confirmo lo increíble que eres y lo afortunado que soy de tenerte. 
+ Todo este tiempo ha sido maravilloso; gracias por tu compañía, por cada momento compartido y por ir descubriéndome más cada día, conociendo tus detalles y viendo cómo nuestra historia se vuelve cada vez más bonita. 
+ Gracias por llegar a mi vida y por regalarme tanta alegría. ¡Me has hecho el hombre más feliz del mundo!
+ </p>
+ <div class="heart-icon">♥</div>
+ <span class="signature">Te amo muchísimo</span>
  </div>
 </body>
 </html>
