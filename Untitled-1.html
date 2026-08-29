@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso Especial</title>
+  <style>
+    body {
+      background-color: #6a1b9a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .container, .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      width: 150px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #ba68c8;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ab47bc;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login-container" class="container">
+    <h2>Ingresa la contraseña</h2>
+    <input type="password" id="password" placeholder="****">
+    <br>
+    <button onclick="checkPassword()">Entrar</button>
+  </div>
+
+  <div id="card" class="card hidden">
+    <h1>¡Hola!</h1>
+    <p>Este es un espacio especial para ti.</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      if (password === '1234') {
+        document.getElementById('login-container').classList.add('hidden');
+        document.getElementById('card').classList.remove('hidden');
+      } else {
+        alert('Contraseña incorrecta');
+      }
+    }
+  </script>
+</body>
+</html>
